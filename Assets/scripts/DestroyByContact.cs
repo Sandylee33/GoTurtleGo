@@ -4,6 +4,7 @@ using System.Collections;
 public class DestroyByContact : MonoBehaviour {
 
 	public GameObject heart;
+	public GameObject explosion;
 	//private GameController gameController;
 
 	void Start()
@@ -20,6 +21,7 @@ public class DestroyByContact : MonoBehaviour {
 		if (other.tag == "Bullet") 
 		{
 			Instantiate (heart, transform.position, transform.rotation);
+			Instantiate (explosion, transform.position, transform.rotation);
 		}
 		Destroy(gameObject);
 		if (other.tag == "Player") 

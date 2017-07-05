@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{D7A4E01B-5D86-EE69-CBCB-01D9F873D630}") = "GoTurtleGo", "Assembly-CSharp.csproj", "{23889598-4C33-367D-BD53-452D14AA001D}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoTurtleGo", "Assembly-CSharp.csproj", "{23889598-4C33-367D-BD53-452D14AA001D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
