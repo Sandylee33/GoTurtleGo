@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Aestroid : MonoBehaviour {
+	public GameObject explosion;
 	public int aestroidSpeed;
 	public float tumble;
 	// Use this for initialization
@@ -33,6 +34,8 @@ public class Aestroid : MonoBehaviour {
 				GameController.score -= 30;
 
 			}
+			Destroy (gameObject);
+			Instantiate (explosion, transform.position, transform.rotation);
 		}
 	}
 }

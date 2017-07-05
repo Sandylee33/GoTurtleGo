@@ -15,15 +15,16 @@ public class DestroyByContact : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		
-		if (other.tag == "Boundary"|| other.tag == "Enemy"|| other.tag == "EnemyBullet") {
+		if (other.tag == "Boundary"|| other.tag == "Enemy"|| other.tag == "EnemyBullet") 
+		{
 			return;
 		} 
 		if (other.tag == "Bullet") 
 		{
 			Instantiate (heart, transform.position, transform.rotation);
-			Instantiate (explosion, transform.position, transform.rotation);
 		}
 		Destroy(gameObject);
+		Explosion ();
 		if (other.tag == "Player") 
 		{
 			if (Input.GetButton("Fire2")) 
@@ -34,11 +35,15 @@ public class DestroyByContact : MonoBehaviour {
 			else
 			{
 				GameController.score -= 20;
-
 			}
 			Destroy(gameObject);
+			Explosion ();
 		}
 		//Destroy(other.gameObject);
 
+	}
+	private void Explosion()
+	{
+		Instantiate (explosion, transform.position, transform.rotation);
 	}
 }
